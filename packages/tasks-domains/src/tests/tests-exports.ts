@@ -1,1 +1,1 @@
-export * from './entities/make-task'
+export * from './factories/entities/make-task'

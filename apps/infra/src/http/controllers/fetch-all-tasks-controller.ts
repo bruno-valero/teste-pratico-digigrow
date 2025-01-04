@@ -2,6 +2,18 @@ import { makeFindAllTasksUseCase } from '@factories/use-cases/make-find-all-task
 import { TaskPresenter } from '@presenters/task-presenter'
 import { FastifyReply, FastifyRequest } from 'fastify'
 
+/**
+ * ---
+ *
+ * ## fetchAllTasksController
+ *
+ * É o controller responsável por buscar todas as tarefas.
+ *
+ * ---
+ *
+ * @param req - Objeto do request HTTP
+ * @param res - Objeto do response HTTP
+ */
 export async function fetchAllTasksController(
   req: FastifyRequest,
   res: FastifyReply,

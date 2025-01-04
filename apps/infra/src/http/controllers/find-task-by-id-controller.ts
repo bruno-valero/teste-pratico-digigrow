@@ -4,6 +4,18 @@ import { TaskPresenter } from '@presenters/task-presenter'
 import { findTaskByIdControllerParamsSchema } from '@routes/task-routes-schemas'
 import { FastifyReply, FastifyRequest } from 'fastify'
 
+/**
+ * ---
+ *
+ * ## findTaskByIdController
+ *
+ * É o controller responsável por buscar uma tarefa por id.
+ *
+ * ---
+ *
+ * @param req - Objeto do request HTTP
+ * @param res - Objeto do response HTTP
+ */
 export async function findTaskByIdController(
   req: FastifyRequest,
   res: FastifyReply,

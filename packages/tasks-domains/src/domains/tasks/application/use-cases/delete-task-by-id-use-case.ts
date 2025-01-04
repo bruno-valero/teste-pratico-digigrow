@@ -8,9 +8,43 @@ export interface DeleteTaskByIdUseCaseRequest {
 
 export type DeleteTaskByIdUseCaseResponse = Either<TaskNotFoundError, null>
 
+/**
+ * ---
+ *
+ * ## DeleteTaskByIdUseCase
+ *
+ * Contém a lógica e as regras de negócio para a exclusão de uma task.
+ *
+ * ---
+ *
+ * @param tasksRepository - Repository para a task. É obrigatório passar uma instância que do repositório que o SUT está configurado para usar.
+ */
 export class DeleteTaskByIdUseCase {
-  constructor(private tasksRepository: TasksRepository) {}
+  constructor(
+    /**
+     * ---
+     *
+     * ## tasksRepository
+     *
+     * Repository para a task. É obrigatório passar uma instância que do repositório que o SUT está configurado para usar.
+     *
+     * ---
+     */
+    private tasksRepository: TasksRepository,
+  ) {}
 
+  /**
+   * ---
+   *
+   * ## DeleteTaskByIdUseCase.execute
+   *
+   * Executa a lógica e as regras de negócio para a exclusão de uma task.
+   *
+   * ---
+   *
+   * @param task - Task para a exclusão. Deve possuir o id da task.
+   * @returns - Uma promessa que resolve quando a task for excluída.
+   */
   async execute(
     task: DeleteTaskByIdUseCaseRequest,
   ): Promise<DeleteTaskByIdUseCaseResponse> {

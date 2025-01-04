@@ -14,9 +14,43 @@ export type FindTaskByIdUseCaseResponse = Either<
   }
 >
 
+/**
+ * ---
+ *
+ * ## FindTaskByIdUseCase
+ *
+ * Contém a lógica e as regras de negócio para a busca de uma task por id.
+ *
+ * ---
+ *
+ * @param tasksRepository - Repository para a task. É obrigatório passar uma instância que do repositório que o SUT está configurado para usar.
+ */
 export class FindTaskByIdUseCase {
-  constructor(private tasksRepository: TasksRepository) {}
+  constructor(
+    /**
+     * ---
+     *
+     * ## tasksRepository
+     *
+     * Repository para a task. É obrigatório passar uma instância que do repositório que o SUT está configurado para usar.
+     *
+     * ---
+     */
+    private tasksRepository: TasksRepository,
+  ) {}
 
+  /**
+   * ---
+   *
+   * ## FindTaskByIdUseCase.execute
+   *
+   * Executa a lógica e as regras de negócio para a busca de uma task por id.
+   *
+   * ---
+   *
+   * @param task - Task para a busca. Deve possuir o id da task.
+   * @returns - Uma promessa que resolve quando a task for buscada.
+   */
   async execute(
     task: FindTaskByIdUseCaseRequest,
   ): Promise<FindTaskByIdUseCaseResponse> {

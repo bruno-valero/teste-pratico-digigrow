@@ -5,15 +5,15 @@
     "private": true,
     "scripts": {
         "types": "tsc --noEmit",
-        "lint": "eslint .",
+        "lint": "eslint . --fix",
         "prebuild": "run-s types lint",
         "build": "tsup src/index.ts --format esm,cjs --dts",
         "dev": "tsx watch src/index.ts",
         "start": "node dist/index.js",
         "test:create-prisma-environment": "npm link ./prisma/vitest-environment-prisma",
         "test:install-prisma-environment": "npm link vitest-environment-prisma",
-        "pretest": "run-s test:create-prisma-environment test:install-prisma-environment",
-        "test": "vitest watch"
+        "pretest-e2e": "run-s test:create-prisma-environment test:install-prisma-environment",
+        "test-e2e": "vitest watch"
     },
     "dependencies": {
         "@fastify/cors": "10.0.1",

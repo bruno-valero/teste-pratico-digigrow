@@ -21,10 +21,43 @@ export type UpdateTaskByIdUseCaseResponse = Either<
     task: Task
   }
 >
-
+/**
+ * ---
+ *
+ * ## UpdateTaskByIdUseCase
+ *
+ * Contém a lógica e as regras de negócio para a atualização de uma task por id.
+ *
+ * ---
+ *
+ * @param tasksRepository - Repository para a task. É obrigatório passar uma instância que do repositório que o SUT está configurado para usar.
+ */
 export class UpdateTaskByIdUseCase {
-  constructor(private tasksRepository: TasksRepository) {}
+  constructor(
+    /**
+     * ---
+     *
+     * ## tasksRepository
+     *
+     * Repository para a task. É obrigatório passar uma instância que do repositório que o SUT está configurado para usar.
+     *
+     * ---
+     */
+    private tasksRepository: TasksRepository,
+  ) {}
 
+  /**
+   * ---
+   *
+   * ## UpdateTaskByIdUseCase.execute
+   *
+   * Executa a lógica e as regras de negócio para a atualização de uma task por id.
+   *
+   * ---
+   *
+   * @param task - Task para a atualização. Deve possuir o id da task.
+   * @returns - Uma promessa que resolve quando a task for atualizada.
+   */
   async execute(
     task: UpdateTaskByIdUseCaseRequest,
   ): Promise<UpdateTaskByIdUseCaseResponse> {

@@ -19,6 +19,16 @@ import {
   updateTaskByIdControllerResponseSchema,
 } from './task-routes-schemas'
 
+/**
+ * ---
+ * ## taskRoutes
+ *
+ * É um plugin customizado para o Fastify que adiciona as rotas de tarefas.
+ *
+ * ---
+ *
+ * @param app - Fastify app
+ */
 export async function taskRoutes(app: FastifyTypedInstance) {
   app.post(
     '/tasks',

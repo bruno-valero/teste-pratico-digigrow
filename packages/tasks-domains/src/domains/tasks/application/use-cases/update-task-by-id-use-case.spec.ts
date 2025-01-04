@@ -101,7 +101,9 @@ describe('delete task by id use case', () => {
 
     if (sutResponse.isLeft()) {
       const error = sutResponse.value
-      expect(error).toBeInstanceOf(TaskDescriptionLengthLongerThanPermittedError) // Deve ser um erro de descrição ausente
+      expect(error).toBeInstanceOf(
+        TaskDescriptionLengthLongerThanPermittedError,
+      ) // Deve ser um erro de descrição ausente
     }
   })
 })

@@ -8,6 +8,21 @@ interface MakeTaskProps {
   updatedAt?: Date | null
 }
 
+/**
+ *
+ * ---
+ *
+ * ## Factory Function
+ *
+ * Creates a new Task instance with random data.
+ *
+ * ---
+ *
+ * @param prop - Task properties for the new Task instance. Allow to customize the title, description, createdAt and updatedAt. If not provided, random data will be generated.
+ * @param id - Task id. If not provided, a random id will be generated.
+ * @returns - A new Task instance with the provided properties.
+ *
+ */
 export function makeTask(prop?: MakeTaskProps, id?: string) {
   const task = Task.create(
     {

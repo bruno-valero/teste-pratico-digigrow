@@ -11,9 +11,42 @@ export type FindAllTasksUseCaseResponse = Either<
   }
 >
 
+/**
+ * ---
+ *
+ * ## FindAllTasksUseCase
+ *
+ * Contém a lógica e as regras de negócio para a busca de todas as tasks.
+ *
+ * ---
+ *
+ * @param tasksRepository - Repository para a task. É obrigatório passar uma instância que do repositório que o SUT está configurado para usar.
+ */
 export class FindAllTasksUseCase {
-  constructor(private tasksRepository: TasksRepository) {}
+  constructor(
+    /**
+     * ---
+     *
+     * ## tasksRepository
+     *
+     * Repository para a task. É obrigatório passar uma instância que do repositório que o SUT está configurado para usar.
+     *
+     * ---
+     */
+    private tasksRepository: TasksRepository,
+  ) {}
 
+  /**
+   * ---
+   *
+   * ## FindAllTasksUseCase.execute
+   *
+   * Executa a lógica e as regras de negócio para a busca de todas as tasks.
+   *
+   * ---
+   *
+   * @returns - Uma promessa que resolve quando todas as tasks forem buscadas.
+   */
   async execute(): Promise<FindAllTasksUseCaseResponse> {
     const tasks = await this.tasksRepository.findAll() // Buscar todas as tasks
 
