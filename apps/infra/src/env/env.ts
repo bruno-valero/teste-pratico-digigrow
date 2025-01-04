@@ -16,4 +16,13 @@ if (!_env.success)
     `invalid environment variable schema: ${JSON.stringify(_env.error.format(), null, 4)}`,
   )
 
+/**
+ * ---
+ *
+ * ## env
+ *
+ * É um objeto com as variáveis de ambiente já validadas.
+ *
+ * ---
+ */
 export const env = _env.data

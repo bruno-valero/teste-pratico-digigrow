@@ -3,6 +3,15 @@ import { Task, TasksRepository } from '@digigrow/tasks-domains'
 import { PrismaTaskMapper } from '../mappers/prisma-task-mapper'
 import { prisma } from '../prisma-config'
 
+/**
+ * ---
+ *
+ * ## PrismaTasksRepository
+ *
+ * É uma implementação do repositório de tarefas do sistema, baseada em Prisma.
+ *
+ * ---
+ */
 export class PrismaTasksRepository implements TasksRepository {
   async findAll(): Promise<Task[]> {
     const tasks = await prisma.task.findMany()

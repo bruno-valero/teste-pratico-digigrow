@@ -3,6 +3,18 @@ import { makeDeleteTaskByIdUseCase } from '@factories/use-cases/make-delete-task
 import { deleteTaskControllerParamsSchema } from '@routes/task-routes-schemas'
 import { FastifyReply, FastifyRequest } from 'fastify'
 
+/**
+ * ---
+ *
+ * ## deleteTaskController
+ *
+ * É o controller responsável por lidar com a exclusão de uma tarefa.
+ *
+ * ---
+ *
+ * @param req - Objeto do request HTTP
+ * @param res - Objeto do response HTTP
+ */
 export async function deleteTaskController(
   req: FastifyRequest,
   res: FastifyReply,

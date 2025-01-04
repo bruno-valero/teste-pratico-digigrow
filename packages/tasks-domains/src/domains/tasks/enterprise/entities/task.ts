@@ -16,15 +16,28 @@ export interface TaskCreationProps {
 }
 
 /**
- *
  * ---
  *
- * Represents a task
+ * ## Task
+ *
+ * Representa uma tarefa.
  *
  * ---
- *
  */
 export class Task extends Entity<TaskProps> {
+  /**
+   * ---
+   *
+   * ## Task.create
+   *
+   * Cria uma nova tarefa.
+   *
+   * ---
+   *
+   * @param props - Propriedades da tarefa
+   * @param id - ID da tarefa
+   * @returns - Uma nova instância da tarefa
+   */
   static create(props: TaskCreationProps, id?: string) {
     return new Task(
       {
@@ -37,7 +50,13 @@ export class Task extends Entity<TaskProps> {
   }
 
   /**
-   * The title of the task
+   * ---
+   *
+   * ## Task.title
+   *
+   * Título da tarefa
+   *
+   * ---
    */
   get title() {
     return this.props.title
@@ -51,7 +70,9 @@ export class Task extends Entity<TaskProps> {
   /**
    * ---
    *
-   * The description of the task
+   * ## Task.description
+   *
+   * Descrição da tarefa
    *
    * ---
    */
@@ -71,7 +92,9 @@ export class Task extends Entity<TaskProps> {
   /**
    * ---
    *
-   * The date the task was created
+   * ## Task.createdAt
+   *
+   * A data e hora em que a tarefa foi criada
    *
    * ---
    */
@@ -82,9 +105,10 @@ export class Task extends Entity<TaskProps> {
   /**
    * ---
    *
-   * The date the task was last updated
+   * ## Task.updatedAt
    *
-   * ---
+   * A data e hora em que a tarefa foi atualizada pela última vez
+   *
    */
   get updatedAt() {
     return this.props.updatedAt
@@ -93,7 +117,9 @@ export class Task extends Entity<TaskProps> {
   /**
    * ---
    *
-   * Updates the `updatedAt` property of the task
+   * ## Task.touch
+   *
+   * Atualiza a data e hora da última atualização da tarefa
    *
    * ---
    */
@@ -104,9 +130,13 @@ export class Task extends Entity<TaskProps> {
   /**
    * ---
    *
-   * Converts the task to an object
+   * ## Task.toObject
+   *
+   * Converte a tarefa para um objeto
    *
    * ---
+   *
+   * @returns - Um objeto com as propriedades da tarefa
    */
   toObject() {
     return {
@@ -121,9 +151,13 @@ export class Task extends Entity<TaskProps> {
   /**
    * ---
    *
-   * Converts the task to a JSON string
+   * ## Task.tojson
+   *
+   * Converte a tarefa para uma string JSON
    *
    * ---
+   *
+   * @returns - Uma string JSON do objeto
    */
   tojson() {
     return JSON.stringify(this.toObject())

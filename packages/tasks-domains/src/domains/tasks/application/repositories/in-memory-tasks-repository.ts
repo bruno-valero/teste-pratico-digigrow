@@ -2,6 +2,15 @@ import { Task } from '@entities/task'
 
 import { TasksRepository } from './tasks-repository'
 
+/**
+ * ---
+ *
+ * ## InMemoryTasksRepository
+ *
+ * É destinada para o ambiente de testes, pois ela simula uma respositoria em memória relacionado a tarefas.
+ *
+ * ---
+ */
 export class InMemoryTasksRepository implements TasksRepository {
   private tasks: Task[] = []
 

@@ -1,5 +1,11 @@
 /**
- * Make some property optional on type
+ * ---
+ *
+ * ## Optional
+ *
+ * Retorna um tipo com os campos especificados opcionais.
+ *
+ * ---
  *
  * @example
  * ```typescript

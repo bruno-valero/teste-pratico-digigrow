@@ -12,6 +12,18 @@ import {
 } from '@routes/task-routes-schemas'
 import { FastifyReply, FastifyRequest } from 'fastify'
 
+/**
+ * ---
+ *
+ * ## updateTaskByIdController
+ *
+ * É o controller responsável por atualizar uma tarefa por id.
+ *
+ * ---
+ *
+ * @param req - Objeto do request HTTP
+ * @param res - Objeto do response HTTP
+ */
 export async function updateTaskByIdController(
   req: FastifyRequest,
   res: FastifyReply,

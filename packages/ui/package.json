@@ -9,7 +9,7 @@
     "./code": "./src/code.tsx"
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
+    "lint": "eslint . --fix",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit"
   },
@@ -20,9 +20,17 @@
     "@types/node": "^20.11.24",
     "@types/react": "18.3.0",
     "@types/react-dom": "18.3.1",
+    "autoprefixer": "10.4.20",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "postcss": "8.4.49",
+    "tailwind-merge": "2.6.0",
+    "tailwindcss": "3.4.17",
+    "tailwindcss-animate": "1.0.7",
     "typescript": "5.5.4"
   },
   "dependencies": {
+    "lucide-react": "0.469.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }

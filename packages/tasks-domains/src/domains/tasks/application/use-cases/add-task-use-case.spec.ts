@@ -79,7 +79,9 @@ describe('add task use case', () => {
 
     if (response.isLeft()) {
       const error = response.value
-      expect(error).toBeInstanceOf(TaskDescriptionLengthLongerThanPermittedError) // Deve ser um erro de descrição ausente
+      expect(error).toBeInstanceOf(
+        TaskDescriptionLengthLongerThanPermittedError,
+      ) // Deve ser um erro de descrição ausente
     }
 
     const tasksRefetch = await tasksRepository.findAll()

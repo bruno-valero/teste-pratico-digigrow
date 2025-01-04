@@ -10,11 +10,16 @@
     "test": {
       "cache": false
     },
-    "lint": {
-      "dependsOn": ["^lint"]
+    "test-e2e": {
+      "cache": false
     },
-    "check-types": {
-      "dependsOn": ["^check-types"]
+    "lint": {
+      "dependsOn": ["^lint"],
+      "cache": false
+    },
+    "types": {
+      "dependsOn": ["^types"],
+      "cache": false
     },
     "dev": {
       "cache": false,

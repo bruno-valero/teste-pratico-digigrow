@@ -7,8 +7,11 @@
   "module": "./build/index.mjs",
   "types": "./build/index.d.ts",
   "scripts": {
-    "test": "vitest watch",
-    "build": "tsup src/index.ts --format esm,cjs --dts --out-dir build"
+    "types": "tsc --noEmit",
+    "lint": "eslint . --fix",
+    "prebuild": "run-s types lint",
+    "build": "tsup src/index.ts --format esm,cjs --dts --out-dir build",
+    "test": "vitest watch"
   },
   "devDependencies": {
     "@digigrow/eslint-config": "*",

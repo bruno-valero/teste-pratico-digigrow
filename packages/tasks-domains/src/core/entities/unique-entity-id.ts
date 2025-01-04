@@ -8,6 +8,18 @@ export const uniqueEntityIdInstanceSchema = z.custom<UniqueEntityId>(
   'must be an UniqueEntityId',
 )
 
+/**
+ *
+ * ---
+ *
+ * ## UniqueEntityId
+ *
+ * É destinada para ser utilizada como identificador exclusivo para entidades do sistema.
+ *
+ * ---
+ *
+ * @param id - Identificador exclusivo para a entidade. Se não for fornecido, será gerado um identificador aleatório.
+ */
 export class UniqueEntityId {
   private _value: string
 

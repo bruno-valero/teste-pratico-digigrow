@@ -1,8 +1,25 @@
 import { FuncArgs } from '@core/types/function-arguments'
+import { makeTask } from '@factories/entities/make-task'
 import { TasksRepository } from '@repositories/tasks-repository'
 import { AddTaskUseCase } from 'src/domains/tasks/application/use-cases/add-task-use-case'
-import { makeTask } from 'src/tests/entities/make-task'
 
+/**
+ *
+ * ---
+ *
+ * ## Factory Function
+ *
+ * Destinada para o ambiente de teste, essa função cria uma nova task com os dados fornecidos, já realizando as validações necessárias.
+ *
+ * ---
+ *
+ *
+ * @param props.makeTaskProps - Propriedades para a task a ser criada. Se não for fornecido, será criada uma task aleatória.
+ * @param props.tasksRepository - Repository para a task. É obrigatório passar uma instância que do repositório que o SUT está configurado para usar.
+ * @param props.sut - Sut (System Under Test) para a task. É obrigatório passar uma instância que está configurada para usar o repositório fornecido.
+ * @param props.initialLength - Length inicial das tasks no repositório.
+ * @returns - Uma promessa que resolve quando a task for criada.
+ */
 export async function createOneTask({
   makeTaskProps,
   tasksRepository,

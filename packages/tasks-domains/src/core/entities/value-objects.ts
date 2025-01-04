@@ -1,3 +1,14 @@
+/**
+ *
+ * ---
+ * ## ValueObject
+ *
+ * É destinada para ser extendida por classes que representam valor objetos do sistema.
+ *
+ * ---
+ *
+ * @param Props - Tipo das propriedades do objeto.
+ */
 export abstract class ValueObject<Props> {
   protected props: Props
 
