@@ -1,26 +1,38 @@
 {
-  "name": "@repo/eslint-config",
+  "name": "@digigrow/eslint-config",
   "version": "0.0.0",
   "type": "module",
   "private": true,
   "exports": {
     "./base": "./base.js",
     "./next-js": "./next.js",
+    "./next": "./next.cjs",
+    "./react": "./react.cjs",
+    "./node": "./node.cjs",
     "./react-internal": "./react-internal.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@next/eslint-plugin-next": "^15.1.0",
+    "@rocketseat/eslint-config": "2.2.2",
     "@typescript-eslint/eslint-plugin": "^8.15.0",
     "@typescript-eslint/parser": "^8.15.0",
-    "eslint": "^9.15.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint": "8",
+    "eslint-config-next": "14.2.14",
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-simple-import-sort": "12.1.1",
     "eslint-plugin-turbo": "^2.3.0",
+    "eslint-plugin-vitest-globals": "1.5.0",
     "globals": "^15.12.0",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "typescript": "^5.3.3",
     "typescript-eslint": "^8.15.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node.cjs"
+    ]
   }
 }
