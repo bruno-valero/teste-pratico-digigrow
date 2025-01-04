@@ -1,0 +1,25 @@
+{
+  "name": "@digigrow/tasks-domains",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "main": "./build/index.js",
+  "module": "./build/index.mjs",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "test": "vitest watch",
+    "build": "tsup src/index.ts --format esm,cjs --dts --out-dir build"
+  },
+  "devDependencies": {
+    "@digigrow/eslint-config": "*",
+    "@digigrow/typescript-config": "*",
+    "@types/node": "^20",
+    "typescript": "5.5.4",
+    "vite-tsconfig-paths": "5.1.4",
+    "vitest": "2.1.8"
+  },
+  "dependencies": {
+    "@faker-js/faker": "9.3.0",
+    "zod": "3.24.1"
+  }
+}

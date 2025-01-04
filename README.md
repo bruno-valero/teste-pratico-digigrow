@@ -1,84 +1,47 @@
-# Turborepo starter
+# Teste Prático da Digigrow
 
-This is an official starter Turborepo.
+Este é um teste prático proposto pela **Digigrow**. O teste prático consiste na criação de uma aplicação com duas partes: **back-end** e **front-end**.
 
-## Using this example
+- ### Back-end:
 
-Run the following command:
+    No **back-end**, é necessário desenvolver uma **API REST** utilizando **Node.js**, com funcionalidades para **adicionar**, **listar**, **editar** e **excluir** tarefas. A API deverá usar o banco de dados **MongoDB** para armazenar as tarefas e implementar validações simples, como garantir que o campo "**title**" seja obrigatório e que a descrição não ultrapasse **255 caracteres**.
 
-```sh
-npx create-turbo@latest
+    Para ver mais detalhes sobre a API, consulte o arquivo **[README.md da sessão de back-end](back-end.md)**.
+
+- ### Front-end:
+
+    No **front-end**, deve ser criada uma interface em **React.js** que permita ao usuário interagir com a API. A interface deve permitir **listar**, **adicionar**, **editar** e **excluir** tarefas de forma intuitiva. Embora não seja um requisito, um **design responsivo** será considerado um diferencial.
+
+    Para ver mais detalhes sobre o front-end, consulte o arquivo **[README.md da sessão de front-end](front-end.md)**.
+
+## Sobre o Monorepo
+
+Como o desafio proposto é a criação de um projeto com duas partes, **back-end** e **front-end**, decidi utilizar o **Monorepo** para organizar os projetos. O **Monorepo** consoste em organizar vários projetos dentro de uma única estrutura de diretórios. Isso permite que os projetos sejam mantidos e gerenciados de forma mais eficiente, além de facilitar a comunicação e a integração entre os projetos. Para faciçitar a configuração, eu estou utilizando uma solução da [**Versel**](https://vercel.com) chamada **[Turborepo](https://turbo.build)**.
+
+Para entender melhor o **Monorepo**, recomendo a leitura do artigo "[Monorepo: como usá-lo para desenvolver e integrar grandes projetos](https://www.alura.com.br/artigos/monorepo-usa-lo-desenvolver-integrar-grandes-projetos)". 
+
+## Começando
+
+### Instalação
+
+```bash
+npm install
 ```
 
-## What's inside?
+### Rodando os testes
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+```bash
+npm run test
 ```
 
-### Develop
+### Rodando o linter
 
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
+```bash
+npm run lint
 ```
 
-### Remote Caching
+### Rodando a checagem de tipos
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
+```bash
+npm run types
 ```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)

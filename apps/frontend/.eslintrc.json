@@ -1,0 +1,3 @@
+{
+    "extends": ["@digigrow/eslint-config/next"]
+}
