@@ -14,7 +14,7 @@ import { prisma } from '../prisma-config'
  */
 export class PrismaTasksRepository implements TasksRepository {
   async findAll(): Promise<Task[]> {
-    const tasks = await prisma.task.findMany()
+    const tasks = await prisma.task.findMany({ orderBy: { createdAt: 'desc' } })
 
     const mappedTasks = tasks.map(PrismaTaskMapper.toDomain)
     return mappedTasks
