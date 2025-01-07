@@ -88,12 +88,11 @@ export function useTaskHandle({
 
     const result = {
       titleOk:
-        (!title.isEmpty && title.value !== task.title) ||
-        description.value !== task.description,
+        !title.isEmpty &&
+        (title.value !== task.title || description.value !== task.description),
       descriptionOk:
-        (description.remainingCharacters > 0 &&
-          description.value !== task.description) ||
-        title.value !== task.title,
+        description.remainingCharacters > 0 &&
+        (description.value !== task.description || title.value !== task.title),
     }
 
     return result
@@ -129,6 +128,7 @@ export function useTaskHandle({
       if (response?.message) {
         toast({
           title: `Erro ao ${type === 'edit' ? 'atualizar' : 'criar'} a tarefa`,
+          variant: 'destructive',
           description: `Houve um erro ao ${type === 'edit' ? 'atualizar' : 'criar'} a tarefa`,
           action: (
             <ToastAction

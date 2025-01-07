@@ -7,8 +7,8 @@ import { env } from '@/env'
 import { TasksTags } from '@/fetch-tags/tasks'
 
 const addNewTaskskRequestSchema = z.object({
-  title: z.string().min(1),
-  description: z.string().max(255).optional(),
+  title: z.string().trim().min(1),
+  description: z.string().trim().max(255).optional(),
 })
 
 /**

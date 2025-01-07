@@ -8,8 +8,8 @@ import { TasksTags } from '@/fetch-tags/tasks'
 
 const updateTaskRequestSchema = z.object({
   id: z.string().uuid(),
-  title: z.string().min(1),
-  description: z.string().max(255).optional(),
+  title: z.string().trim().min(1),
+  description: z.string().trim().max(255).optional(),
 })
 
 /**

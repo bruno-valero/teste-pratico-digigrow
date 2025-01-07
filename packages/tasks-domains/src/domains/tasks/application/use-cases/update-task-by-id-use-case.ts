@@ -64,10 +64,13 @@ export class UpdateTaskByIdUseCase {
     const existingTask = await this.tasksRepository.findById(task.id)
     if (!existingTask) return left(new TaskNotFoundError()) // Se a task não existir, retornar erro
 
-    if (!task.title && !task.description)
+    const hasTitle = !!task.title?.trim()
+    const hasDescription = !!task.description?.trim()
+
+    if (!hasTitle && !hasDescription)
       return left(new TaskTitleAndDescriptionMissingError()) // Se nenhum campo for enviado, retornar a task atual
 
-    if (task.title && existingTask.title !== task.title) {
+    if (task.title?.trim() && existingTask.title !== task.title) {
       // Se a task existir, mas o título for diferente da task encontrada, verificar se o título já existe
       const existingTaskWithSameTitle = await this.tasksRepository.findByTitle(
         task.title,
@@ -78,7 +81,7 @@ export class UpdateTaskByIdUseCase {
     if (task.description && task.description.length > 255)
       return left(new TaskDescriptionLengthLongerThanPermittedError()) // Se a descrição for maior que 255 caracteres, retornar erro
 
-    if (task.title) {
+    if (task.title?.trim()) {
       existingTask.title = task.title // Atualizar o título
     }
 
