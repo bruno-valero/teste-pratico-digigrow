@@ -10,7 +10,7 @@ Para entender mais sobre a metodologia **Domain-Driven Design**, recomendo ler o
 
 ### Infraestrutura (back-end)
 
-Como este módulo é destinado a isolar a lógica e as regras de negócio da aplicação, ele não possui nenhum tipo de infraestrutura. Em vez disso, será utilizado como uma camada de abstração para a infraestrutura, permitindo que a aplicação seja independente da infraestrutura em si. Assim a parte do projeto é responsável apenas pela infraestrutura, como as rotas http e a comunicação com o banco de dados estarão localizadas em outro módulo deste monorepo chamado [**infra**](https://github.com/bruno-valero/teste-pratico-digigrow/tree/main/apps/infra).
+Como este módulo é destinado a isolar a lógica e as regras de negócio da aplicação, ele não possui nenhum tipo de infraestrutura. Em vez disso, será utilizado como uma camada de abstração para a infraestrutura, permitindo que a aplicação seja independente da infraestrutura em si. Assim a parte do projeto é responsável apenas pela infraestrutura, como as rotas http e a comunicação com o banco de dados estarão localizadas em outro módulo deste monorepo chamado [**infra**](https://github.com/bruno-valero/teste-pratico-digigrow/tree/main/apps/infra), não se esqueça de ler o arquivo [`README.md`](https://github.com/bruno-valero/teste-pratico-digigrow/blob/main/apps/infra/README.md), pois ele contém informações importantes sobre a API.
 
 ---
 

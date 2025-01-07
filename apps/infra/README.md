@@ -6,7 +6,11 @@ Este é um teste prático proposto pela **Digigrow**. O teste prático consiste 
 
 O projeto é baseado no **Domain-Driven Design (DDD)**. O DDD é uma abordagem de projeto orientada a **domínios** que visa a separação de responsabilidades e o isolamento de código. O projeto segue a **clean architecture** e utiliza o **DDD** para isolar e organizar a lógica de negócio. Para saber mais sobre o DDD, recomendo a leitura do artigo [Fundamentos do Domain-Driven Design](https://www.brunovalero.com.br/repos/fast-feet-api-desafio-rocketseat/issues/12).
 
-Portanto, todas as classes de domínios, a lógica de negócio e as regras de negócio estão localizadas em outro pacote deste monorepo chamado [**@digigrow/tasks-domains**](https://github.com/bruno-valero/teste-pratico-digigrow/tree/main/packages/tasks-domains). Assim, esta parte do projeto é responsável apenas pela infraestrutura, como as rotas http e a comunicação com o banco de dados.
+Portanto, todas as classes de domínios, a lógica de negócio e as regras de negócio estão localizadas em outro pacote deste monorepo chamado [**@digigrow/tasks-domains**](https://github.com/bruno-valero/teste-pratico-digigrow/tree/main/packages/tasks-domains), não se esqueça de ler o arquivo [`README.md`](https://github.com/bruno-valero/teste-pratico-digigrow/blob/main/packages/tasks-domains/README.md), pois ele contém informações importantes sobre a lógica de negócio. Assim, esta parte do projeto é responsável apenas pela infraestrutura, como as rotas http e a comunicação com o banco de dados.
+
+## Consumo da API
+
+A API será consumida pelo front-end, desenvolvido em **Next.js**. Para saber mais sobre o front-end, veja um dos módulos deste monorepo chamado **[front-end](https://github.com/bruno-valero/teste-pratico-digigrow/tree/main/apps/frontend)**, não se esqueça de ler o arquivo [`README.md`](https://github.com/bruno-valero/teste-pratico-digigrow/blob/main/apps/frontend/README.md), pois ele contém informações importantes sobre o front-end.
 
 ---
 

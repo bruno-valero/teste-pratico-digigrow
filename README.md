@@ -6,13 +6,13 @@ Este é um teste prático proposto pela **Digigrow**. O teste prático consiste 
 
     No **back-end**, é necessário desenvolver uma **API REST** utilizando **Node.js**, com funcionalidades para **adicionar**, **listar**, **editar** e **excluir** tarefas. A API deverá usar o banco de dados **MongoDB** para armazenar as tarefas e implementar validações simples, como garantir que o campo "**title**" seja obrigatório e que a descrição não ultrapasse **255 caracteres**.
 
-    Para ver mais detalhes sobre a API, veja um dos módulos deste monorepo chamado **[infra](https://github.com/bruno-valero/teste-pratico-digigrow/tree/main/apps/infra)**.
+    Para ver mais detalhes sobre a API, veja um dos módulos deste monorepo chamado **[infra](https://github.com/bruno-valero/teste-pratico-digigrow/tree/main/apps/infra)**, não se esqueça de ler o arquivo [`README.md`](https://github.com/bruno-valero/teste-pratico-digigrow/blob/main/apps/infra/README.md), pois ele contém informações importantes sobre a API.
 
 - ### Front-end:
 
     No **front-end**, deve ser criada uma interface em **React.js** que permita ao usuário interagir com a API. A interface deve permitir **listar**, **adicionar**, **editar** e **excluir** tarefas de forma intuitiva. Embora não seja um requisito, um **design responsivo** será considerado um diferencial.
 
-    Para ver mais detalhes sobre o front-end, veja um dos módulos deste monorepo chamado **[front-end](https://github.com/bruno-valero/teste-pratico-digigrow/tree/main/apps/frontend)**.
+    Para ver mais detalhes sobre o front-end, veja um dos módulos deste monorepo chamado **[front-end](https://github.com/bruno-valero/teste-pratico-digigrow/tree/main/apps/frontend)**, não se esqueça de ler o arquivo [`README.md`](https://github.com/bruno-valero/teste-pratico-digigrow/blob/main/apps/frontend/README.md), pois ele contém informações importantes sobre o front-end.
 
 ## Sobre o Monorepo
 
