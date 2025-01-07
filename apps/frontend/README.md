@@ -6,7 +6,7 @@ Este é um teste prático proposto pela **Digigrow**. O teste prático consiste 
 
 No **front-end**, deve ser criada uma interface em **Next.js** (um framework baseado em **React.js**) que permita ao usuário interagir com a API. A interface deve permitir **listar**, **adicionar**, **editar** e **excluir** tarefas de forma intuitiva. Embora não seja um requisito, um **design responsivo** será considerado um diferencial.
 
-O **front-end** deve consumir a API de tarefas fornecida pelo **back-end**. Para saber mais sobre a API, consulte outro módulo deste monorepo chamado de **[infra](https://github.com/bruno-valero/teste-pratico-digigrow/tree/main/apps/infra)**.
+O **front-end** deve consumir a API de tarefas fornecida pelo **back-end**. Para saber mais sobre a API, consulte outro módulo deste monorepo chamado de **[infra](https://github.com/bruno-valero/teste-pratico-digigrow/tree/main/apps/infra)**, não se esqueça de ler o arquivo [`README.md`](https://github.com/bruno-valero/teste-pratico-digigrow/blob/main/apps/infra/README.md), pois ele contém informações importantes sobre a API.
 
 ## Documentação e Tipagem
 
