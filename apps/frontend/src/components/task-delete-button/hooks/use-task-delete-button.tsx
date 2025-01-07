@@ -9,6 +9,24 @@ interface UseTaskDeleteButtonProps {
   task: TaskListModel[0]
 }
 
+/**
+ * ---
+ *
+ * ## Hook
+ *
+ * Um hook é uma função que pode ser usada em um componente ou em um componente filho. Eles são úteis para reutilizar código e para lidar com eventos específicos.
+ *
+ * ---
+ *
+ * ### useTaskDeleteButton
+ *
+ * Responsável por lidar com a lógica de exclusão de tarefa.
+ *
+ * ---
+ *
+ * @param props.task - Tarefa a ser excluída.
+ * @returns
+ */
 export function useTaskDeleteButton({ task }: UseTaskDeleteButtonProps) {
   const dialogCloseRef = useRef<HTMLButtonElement>(null)
   const dialogTriggerRef = useRef<HTMLButtonElement>(null)

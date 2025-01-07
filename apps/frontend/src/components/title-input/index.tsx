@@ -11,7 +11,7 @@ import {
 
 import { cn } from '@/lib/utils'
 
-import { FormState } from '../task-detailed/task-detailed-card/task-detailed-card-footer/task-detailed-card-footer-edit-button'
+import { FormState } from '../task-handle-button/hooks/use-task-handle'
 import { Input } from '../ui/input'
 
 interface TitleInputProps extends ComponentProps<typeof Input> {
@@ -19,6 +19,21 @@ interface TitleInputProps extends ComponentProps<typeof Input> {
   updateState?: (props: FormState) => void
 }
 
+/**
+ * ---
+ *
+ * ## TitleInput
+ *
+ * Componente de título do formulário de criação de tarefa.
+ *
+ * ---
+ *
+ * @param props.value - Valor do campo de título.
+ * @param props.updateState - Função para atualizar o estado do formulário.
+ * @param props.onChange - Função para lidar com o evento de alteração do campo de título.
+ * @param ...InputProps - Propriedades adicionais para o componente Input.
+ * @returns
+ */
 export function TitleInput(props: TitleInputProps) {
   const [data, setData] = useState(props.value ?? '')
   const isEmpty = useMemo(() => data.trim().length === 0, [data.length])

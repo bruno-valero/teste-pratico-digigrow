@@ -46,27 +46,26 @@ npm install
 
 ---
 
-### Rodando o linter
-
-```bash
-npm run lint
-```
-
----
-
 ### Rodando a checagem de tipos
 
 ```bash
 npm run types
 ```
+---
 
+### Rodando o linter
+
+```bash
+npm run lint
+```
 ---
 
 ### Variáveis de ambiente
 
-Para realizar os passos a seguir, é necessário ter as seguintes variáveis de ambiente definidas no módulo de infra:
+Para realizar os passos a seguir, é necessário ter as seguintes variáveis de ambiente definidas no módulo de infra e no módulo de frontend:
 
 - Crie um arquivo `.env` na [raiz do módulo de infra](https://github.com/bruno-valero/teste-pratico-digigrow/tree/main/apps/infra) e adicione as variáveis de ambiente. Para saber quais são as variáveis de ambiente necessárias, consulte o arquivo [`.env.example`](https://github.com/bruno-valero/teste-pratico-digigrow/blob/main/apps/infra/.env.example).
+- Crie um arquivo `.env` na [raiz do módulo de frontend](https://github.com/bruno-valero/teste-pratico-digigrow/tree/main/apps/frontend) e adicione as variáveis de ambiente. Para saber quais são as variáveis de ambiente necessárias, consulte o arquivo [`.env.example`](https://github.com/bruno-valero/teste-pratico-digigrow/blob/main/apps/frontend/.env.example).
 
 ---
 
@@ -93,6 +92,38 @@ Serão duas aplicações que irão rodar simultaneamente.
 
 ```bash
 npm run dev
+```
+
+- Para acessar a aplicação de infraestrutura (back-end), acesse [http://localhost:3333](http://localhost:3333) e consulte a documentação da API feita com **Swagger** em [http://localhost:3333/docs](http://localhost:3333/docs).
+- Para acessar a aplicação de front-end, acesse [http://localhost:3000](http://localhost:3000).
+
+---
+
+### Fazendo a Build
+
+O comando abaixo irá gerar os arquivos de build de ambas as aplicações. Tanto a aplicação de infra como a aplicação de front-end.
+
+```bash
+npm run build
+```
+
+**Atenção!:** 4 processos irão ser executados para a finalização completa da build:
+
+1. **build-domains:** Para compilar o código do pacote de domínios.
+2. **build-infra:** Para compilar o código do pacote de infraestrutura.
+3. **run-infra:** Para executar o código do pacote de infraestrutura. Esse processo é executado para garantir que a build do front-end, que será a próxima etapa, possa fazer requisições à API do pacote de infraestrutura durante seu processo de build.
+4. **build-frontend:** Para compilar o código do pacote de front-end.
+
+**Observação!:** Após a conclusão do quarto processo, mate o terminal, pois o terceiro processo não será finalizado, já que ele manterá o servidor rodando.
+
+---
+
+### Rodando a build das aplicações
+
+Para rodar a build das aplicações, execute o comando abaixo.
+
+```bash
+npm start
 ```
 
 - Para acessar a aplicação de infraestrutura (back-end), acesse [http://localhost:3333](http://localhost:3333) e consulte a documentação da API feita com **Swagger** em [http://localhost:3333/docs](http://localhost:3333/docs).

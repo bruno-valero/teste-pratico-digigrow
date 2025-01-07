@@ -8,6 +8,17 @@ import { useTaskDetailedContext } from '../contexts/task-detailed-context'
 
 interface TaskDetailedCardTitleProps extends ComponentProps<typeof CardTitle> {}
 
+/**
+ * ---
+ *
+ * ## TaskDetailedCardTitle
+ *
+ * Componente de título da tarefa detalhada. Exibe o título da tarefa.
+ *
+ * ---
+ *
+ * @param ...CardTitleProps - Propriedades adicionais para o componente CardTitle.
+ */
 export function TaskDetailedCardTitle(props: TaskDetailedCardTitleProps) {
   const context = useTaskDetailedContext()
   if (!context) return null

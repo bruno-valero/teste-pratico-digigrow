@@ -7,6 +7,22 @@ interface TaskDeleteButtonTriggerProps
   buttonJSX: JSX.Element
 }
 
+/**
+ * ---
+ *
+ * ## TaskDeleteButtonTrigger
+ *
+ * Componente de trigger do botão de exclusão de tarefa. Recebe o elemento JSX do botão e renderiza o mesmo.
+ *
+ * ---
+ *
+ * @param props.buttonJSX - Elemento JSX para renderização do botão.
+ * @returns
+ */
 export function TaskDeleteButtonTrigger(props: TaskDeleteButtonTriggerProps) {
-  return <DialogTrigger {...props}>{props.buttonJSX}</DialogTrigger>
+  return (
+    <DialogTrigger {...props} asChild>
+      {props.buttonJSX}
+    </DialogTrigger>
+  )
 }

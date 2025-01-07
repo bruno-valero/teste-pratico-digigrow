@@ -8,6 +8,17 @@ import { useTaskDetailedContext } from '../../contexts/task-detailed-context'
 
 interface TaskDetailedCardHeaderMetadataProps extends ComponentProps<'div'> {}
 
+/**
+ * ---
+ *
+ * ## TaskDetailedCardHeaderMetadata
+ *
+ * Componente de metadados do cabeçalho da tarefa detalhada. Exibe informações sobre a criação e a última atualização da tarefa.
+ *
+ * ---
+ *
+ * @param ...divProps - Propriedades adicionais para o componente div.
+ */
 export function TaskDetailedCardHeaderMetadata(
   props: TaskDetailedCardHeaderMetadataProps,
 ) {

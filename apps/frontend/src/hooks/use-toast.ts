@@ -1,6 +1,5 @@
 'use client'
 
-// Inspired by react-hot-toast library
 import * as React from 'react'
 
 import type { ToastActionElement, ToastProps } from '@/components/ui/toast'
@@ -168,6 +167,21 @@ function toast({ ...props }: Toast) {
   }
 }
 
+/**
+ * ---
+ *
+ * ## Hook
+ *
+ * Um hook é uma função que pode ser usada em um componente ou em um componente filho. Eles são úteis para reutilizar código e para lidar com eventos específicos.
+ *
+ * ---
+ *
+ * ### useToast
+ *
+ * Permite que você exiba mensagens de notificação em um componente filho. Ele é usado para exibir mensagens de sucesso, erro, ou informações.
+ *
+ * ---
+ */
 function useToast() {
   const [state, setState] = React.useState<State>(memoryState)
 

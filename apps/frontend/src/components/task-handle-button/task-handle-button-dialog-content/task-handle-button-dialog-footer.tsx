@@ -10,6 +10,17 @@ import { useTaskHandleDialogContext } from '../contexts/task-handle-context'
 interface TaskHandleButtonDialogFooterProps
   extends ComponentProps<typeof DialogFooter> {}
 
+/**
+ * ---
+ *
+ * ## TaskHandleButtonDialogFooter
+ *
+ * Componente de rodapé do diálogo de edição ou criação de tarefa. Exibe um botão para salvar ou cancelar a ação.
+ *
+ * ---
+ *
+ * @param ...DialogFooterProps - Propriedades adicionais para o componente DialogFooter.
+ */
 export function TaskHandleButtonDialogFooter(
   props: TaskHandleButtonDialogFooterProps,
 ) {

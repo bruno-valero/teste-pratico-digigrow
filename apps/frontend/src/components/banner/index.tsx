@@ -3,6 +3,16 @@ import Link from 'next/link'
 
 import { Card, CardContent, CardHeader } from '../ui/card'
 
+/**
+ * ---
+ *
+ * ## Banner
+ *
+ * Componente de banner do app. Responsável por mostrar o logo do app e o título.
+ *
+ * ---
+ *
+ */
 export function Banner() {
   return (
     <header className="relative mb-10 flex w-full items-center justify-center bg-gradient-to-r from-background from-10% via-primary-foreground/60 via-50% to-background to-90% text-white shadow-lg shadow-chart-1/20">

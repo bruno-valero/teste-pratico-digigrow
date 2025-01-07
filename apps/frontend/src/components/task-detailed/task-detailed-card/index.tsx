@@ -11,6 +11,17 @@ import { TaskDetailedCardWrapper } from './task-detailed-card-wrapper'
 
 interface TaskDetailedCardProps extends ComponentProps<typeof Card> {}
 
+/**
+ * ---
+ *
+ * ## TaskDetailedCard
+ *
+ * Componente de tarefa detalhada. Exibe informações detalhadas sobre uma tarefa específica.
+ *
+ * ---
+ *
+ * @param ...CardProps - Propriedades adicionais para o componente Card.
+ */
 export function TaskDetailedCard(props: TaskDetailedCardProps) {
   return (
     <TaskDetailedCardWrapper {...props}>

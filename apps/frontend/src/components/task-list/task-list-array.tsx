@@ -7,6 +7,19 @@ interface TaskListArrayProps extends ComponentProps<'div'> {
   tasks: TaskListModel
 }
 
+/**
+ * ---
+ *
+ * ## TaskListArray
+ *
+ * Componente de array de tarefas. Exibe uma lista de tarefas cadastradas no sistema.
+ *
+ * ---
+ *
+ * @param props.tasks - Tarefas a serem exibidas no array.
+ * @param ...divProps - Propriedades adicionais para o componente div.
+ * @returns
+ */
 export function TaskListArray({ tasks, ...props }: TaskListArrayProps) {
   return (
     <div

@@ -6,6 +6,17 @@ import { Button } from '@/components/ui/button'
 interface TaskDetailedCardFooterDeleteButtonTriggerProps
   extends ComponentProps<typeof Button> {}
 
+/**
+ * ---
+ *
+ * ## TaskDetailedCardFooterDeleteButtonTrigger
+ *
+ * Componente de trigger do botão de exclusão da tarefa detalhada. Exibe um botão que, ao ser clicado, exibe um diálogo para solicitar a confirmação da exclusão da tarefa.
+ *
+ * ---
+ *
+ * @param ...ButtonProps - Propriedades adicionais para o componente Button.
+ */
 export function TaskDetailedCardFooterDeleteButtonTrigger(
   props: TaskDetailedCardFooterDeleteButtonTriggerProps,
 ) {

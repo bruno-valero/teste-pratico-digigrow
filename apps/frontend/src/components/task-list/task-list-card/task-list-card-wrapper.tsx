@@ -9,6 +9,19 @@ interface TaskListCardWrapperProps extends ComponentProps<typeof Card> {
   taskId: string
 }
 
+/**
+ * ---
+ *
+ * ## TaskListCardWrapper
+ *
+ * Componente que envolve o componente TaskListCard e adiciona estilos para que ele seja exibido corretamente no layout.
+ *
+ * ---
+ *
+ * @param props.children - Componentes filhos do TaskListCardWrapper.
+ * @param props.taskId - ID da tarefa a ser exibida no card.
+ * @param ...CardProps - Propriedades adicionais para o componente Card.
+ */
 export function TaskListCardWrapper({
   children,
   taskId,

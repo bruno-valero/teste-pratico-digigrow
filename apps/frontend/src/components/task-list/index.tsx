@@ -15,13 +15,36 @@ export type TaskModel = {
   id: string
 }
 
+/**
+ * ---
+ *
+ * ## TaskList
+ *
+ * Componente de lista de tarefas. Exibe uma lista de tarefas cadastradas no sistema.
+ *
+ * ---
+ */
 export async function TaskList() {
-  const tasksResponse = await fetch(`${env.API_URL}/tasks`, {
-    next: { tags: [TasksTags.ALL] },
-  })
-  const tasksData = await tasksResponse.json()
+  let tasksData: TaskModel[]
 
-  const tasks: TaskModel[] = tasksData
+  // Try catch inserido por causa dos erros durante a Build do projeto Next.js
+  // O erro ocorre porque duranre a build o Componente TaskList faz a requisição ao servidor (que está offline no momento)
+  // Então, para que a build não falhe, faço uma tentativa de requisição ao servidor e caso ocorra algum erro, retornamos um array vazio
+
+  // Porque o servidor está offline?
+  // Porque no monorepo todas as aplicações fazem build ao mesmo tempo, então ele está em processo de build também.
+  try {
+    const tasksResponse = await fetch(`${env.API_URL}/tasks`, {
+      next: { tags: [TasksTags.ALL] },
+    })
+
+    tasksData = (await tasksResponse.json()) as TaskModel[]
+  } catch (e) {
+    console.error('TaskList fetch error', e)
+    tasksData = []
+  }
+
+  const tasks = tasksData
 
   return (
     <TaskListProvider tasks={tasks}>

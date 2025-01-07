@@ -11,7 +11,7 @@ import {
 
 import { cn } from '@/lib/utils'
 
-import { FormState } from '../task-detailed/task-detailed-card/task-detailed-card-footer/task-detailed-card-footer-edit-button'
+import { FormState } from '../task-handle-button/hooks/use-task-handle'
 import { Textarea } from '../ui/textarea'
 
 interface DescriptionTextAreaProps extends ComponentProps<typeof Textarea> {
@@ -19,9 +19,28 @@ interface DescriptionTextAreaProps extends ComponentProps<typeof Textarea> {
   updateState?: (props: FormState) => void
 }
 
+export const charactersLimit = 256
+
+/**
+ * ---
+ *
+ * ## DescriptionTextArea
+ *
+ * Componente de texto de descrição do formulário de criação de tarefa.
+ *
+ * ---
+ *
+ * @param props.value - Valor do campo de texto de descrição.
+ * @param props.updateState - Função para atualizar o estado do formulário.
+ * @param props.onChange - Função para lidar com o evento de alteração do campo de texto de descrição.
+ * @returns
+ */
 export function DescriptionTextArea(props: DescriptionTextAreaProps) {
   const [data, setData] = useState(props.value ?? '')
-  const remainingCharacters = useMemo(() => 255 - data.length, [data.length])
+  const remainingCharacters = useMemo(
+    () => charactersLimit - data.length,
+    [data.length],
+  )
 
   useEffect(() => {
     props.updateState?.({ description: { remainingCharacters, value: data } })
@@ -30,10 +49,10 @@ export function DescriptionTextArea(props: DescriptionTextAreaProps) {
   const handleChange = useCallback(
     (e: ChangeEvent<HTMLTextAreaElement>) => {
       const data = e.target.value
-      const remainingCharacters = 255 - data.length
+      const remainingCharacters = charactersLimit - data.length
 
       if (remainingCharacters <= 0) {
-        if (data.length <= 255) {
+        if (data.length <= charactersLimit) {
           setData(data)
         }
       } else {

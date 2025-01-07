@@ -10,12 +10,34 @@ export type TaskListModel = {
   id: string
 }[]
 
+/**
+ * ---
+ *
+ * ## TaskListContext
+ *
+ * Contexto do componente TaskList. Fornece uma lista de tarefas cadastradas no sistema.
+ *
+ * ---
+ */
 const TaskListContext = createContext<{ tasks: TaskListModel } | null>(null)
 
 interface TaskListProviderProps extends ComponentProps<'div'> {
   tasks: TaskListModel
 }
 
+/**
+ * ---
+ *
+ * ## TaskListProvider
+ *
+ * Componente que fornece uma lista de tarefas cadastradas no sistema.
+ *
+ * ---
+ *
+ * @param props.children - Componentes filhos do TaskListProvider.
+ * @param props.tasks - Tarefas a serem exibidas no array.
+ * @param ...divProps - Propriedades adicionais para o componente div.
+ */
 export function TaskListProvider({
   children,
   tasks,
@@ -40,4 +62,13 @@ export function TaskListProvider({
   )
 }
 
+/**
+ * ---
+ *
+ * ## useTaskListContext
+ *
+ * Retorna o contexto do componente TaskList.
+ *
+ * ---
+ */
 export const useTaskListContext = () => useContext(TaskListContext)

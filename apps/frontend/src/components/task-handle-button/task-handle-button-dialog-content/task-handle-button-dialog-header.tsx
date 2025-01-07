@@ -13,6 +13,17 @@ import { useTaskHandleDialogContext } from '../contexts/task-handle-context'
 interface TaskHandleButtonDialogHeaderProps
   extends ComponentProps<typeof DialogHeader> {}
 
+/**
+ * ---
+ *
+ * ## TaskHandleButtonDialogHeader
+ *
+ * Componente de cabeçalho do diálogo de edição ou criação de tarefa. Exibe o título e a descrição do diálogo.
+ *
+ * ---
+ *
+ * @param ...DialogHeaderProps - Propriedades adicionais para o componente DialogHeader.
+ */
 export function TaskHandleButtonDialogHeader(
   props: TaskHandleButtonDialogHeaderProps,
 ) {

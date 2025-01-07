@@ -5,7 +5,27 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
+    "build-frontend": {
+      "cache": false,
+      "dependsOn": ["run-infra"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "run-infra": {
+      "cache": false,
+      "dependsOn": ["build-infra"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"]
+    },
+    "build-infra": {
+      "cache": false,
+      "dependsOn": ["build-domains"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["dist/**"]
+    },
+    "build-domains": {
+      "cache": false
     },
     "test": {
       "cache": false
@@ -22,6 +42,10 @@
       "cache": false
     },
     "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
       "cache": false,
       "persistent": true
     }
