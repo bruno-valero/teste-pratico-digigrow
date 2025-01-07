@@ -42,6 +42,7 @@ export function useTaskDeleteButton({ task }: UseTaskDeleteButtonProps) {
       if (response.message) {
         toast({
           title: 'Erro ao excluir a tarefa',
+          variant: 'destructive',
           description: 'Houve um erro ao excluir a tarefa',
           action: (
             <ToastAction

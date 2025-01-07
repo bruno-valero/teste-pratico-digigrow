@@ -62,8 +62,8 @@ export class AddTaskUseCase {
     const existingTask = await this.tasksRepository.findByTitle(task.title)
     if (existingTask) return left(new TaskWithSameTitleError()) // Se existir uma task com o mesmo título, retornar erro
 
-    const hasTitle = !!task.title
-    const hasDescription = !!task.description
+    const hasTitle = !!task.title.trim()
+    const hasDescription = !!task.description?.trim()
 
     if (!hasTitle) return left(new TaskTitleMissingError()) // Se não tiver título, retornar erro
     if (!hasDescription) return left(new TaskDescriptionMissingError()) // Se não tiver descrição, retornar erro
