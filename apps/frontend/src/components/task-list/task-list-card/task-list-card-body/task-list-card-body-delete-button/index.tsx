@@ -7,6 +7,18 @@ interface TaskListCardBodyDeleteButtonProps {
   task: TaskListModel[0]
 }
 
+/**
+ * ---
+ *
+ * ## TaskListCardBodyDeleteButton
+ *
+ * Componente de botão de exclusão do card de tarefa. Exibe um botão que, ao ser clicado, exibe um diálogo para solicitar a confirmação da exclusão da tarefa.
+ *
+ * ---
+ *
+ * @param props.task - Tarefa a ser excluída.
+ * @returns
+ */
 export function TaskListCardBodyDeleteButton({
   task,
 }: TaskListCardBodyDeleteButtonProps) {

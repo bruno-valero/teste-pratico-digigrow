@@ -9,6 +9,18 @@ import { useTaskDetailedContext } from '../contexts/task-detailed-context'
 interface TaskDetailedCardDescriptionProps
   extends ComponentProps<typeof CardDescription> {}
 
+/**
+ * ---
+ *
+ * ## TaskDetailedCardDescription
+ *
+ * Componente de descrição da tarefa detalhada. Exibe a descrição da tarefa.
+ *
+ * ---
+ *
+ * @param ...CardDescriptionProps - Propriedades adicionais para o componente CardDescription.
+ * @returns
+ */
 export function TaskDetailedCardDescription(
   props: TaskDetailedCardDescriptionProps,
 ) {

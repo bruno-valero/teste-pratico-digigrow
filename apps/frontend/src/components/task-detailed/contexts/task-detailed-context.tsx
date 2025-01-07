@@ -4,6 +4,15 @@ import { ComponentProps, createContext, useContext } from 'react'
 
 import { TaskDetailedModel } from '..'
 
+/**
+ * ---
+ *
+ * ## TaskDetailedContext
+ *
+ * Contexto do componente TaskDetailed. Fornece informações detalhadas sobre uma tarefa específica.
+ *
+ * ---
+ */
 const TaskDetailedContext = createContext<{ task: TaskDetailedModel } | null>(
   null,
 )
@@ -12,6 +21,19 @@ interface TaskDetailedProviderProps extends ComponentProps<'div'> {
   task: TaskDetailedModel
 }
 
+/**
+ * ---
+ *
+ * ## TaskDetailedProvider
+ *
+ * Componente que fornece informações detalhadas sobre uma tarefa específica.
+ *
+ * ---
+ *
+ * @param props.children - Componentes filhos do TaskDetailedProvider.
+ * @param props.task - Informações detalhadas sobre uma tarefa específica.
+ * @param ...divProps - Propriedades adicionais para o componente div.
+ */
 export function TaskDetailedProvider({
   children,
   task,
@@ -29,4 +51,13 @@ export function TaskDetailedProvider({
   )
 }
 
+/**
+ * ---
+ *
+ * ## useTaskDetailedContext
+ *
+ * Retorna o contexto do componente TaskDetailed.
+ *
+ * ---
+ */
 export const useTaskDetailedContext = () => useContext(TaskDetailedContext)

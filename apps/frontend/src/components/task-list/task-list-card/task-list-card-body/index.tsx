@@ -6,6 +6,18 @@ interface TaskListCardBodyProps {
   task: TaskListModel[0]
 }
 
+/**
+ * ---
+ *
+ * ## TaskListCardBody
+ *
+ * Componente de corpo do card de tarefa. Exibe informações detalhadas sobre uma tarefa específica.
+ *
+ * ---
+ *
+ * @param props.task - Tarefa a ser exibida no card.
+ * @returns
+ */
 export function TaskListCardBody({ task }: TaskListCardBodyProps) {
   return (
     <>

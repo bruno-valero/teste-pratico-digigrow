@@ -1,5 +1,21 @@
 import { useEffect, useState } from 'react'
 
+/**
+ * ---
+ *
+ * ## Hook
+ *
+ * Um hook é uma função que pode ser usada em um componente ou em um componente filho. Eles são úteis para reutilizar código e para lidar com eventos específicos.
+ *
+ * ---
+ *
+ * ### useDimensions
+ *
+ * Retorna as dimensões da tela (Largura e Altura) do navegador.
+ *
+ * ---
+ *
+ */
 export function useDimensions() {
   const [dimensions, setDimensions] = useState<{
     width: number

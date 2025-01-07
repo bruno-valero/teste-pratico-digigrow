@@ -10,6 +10,17 @@ import { TaskDetailedCardHeaderMetadata } from './task-detailed-card-header-meta
 interface TaskDetailedCardHeaderProps
   extends ComponentProps<typeof CardHeader> {}
 
+/**
+ * ---
+ *
+ * ## TaskDetailedCardHeader
+ *
+ * Componente de cabeçalho do componente TaskDetailedCard. Exibe informações sobre a tarefa detalhada.
+ *
+ * ---
+ *
+ * @param ...CardHeaderProps - Propriedades adicionais para o componente CardHeader.
+ */
 export function TaskDetailedCardHeader(props: TaskDetailedCardHeaderProps) {
   return (
     <CardHeader {...props}>

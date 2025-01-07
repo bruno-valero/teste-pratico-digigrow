@@ -53,6 +53,19 @@ interface UseTaskHandleProps {
   type: TaskHandleButtonType
 }
 
+/**
+ * ---
+ *
+ * ## useTaskHandle
+ *
+ * Responsável por lidar com a lógica de edição ou criação de tarefa.
+ *
+ * ---
+ *
+ * @param props.task - Tarefa a ser editada ou criada.
+ * @param props.type - Tipo de ação a ser realizada. Pode ser 'edit' ou 'create'.
+ * @returns
+ */
 export function useTaskHandle({
   task,
   type,

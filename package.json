@@ -2,8 +2,12 @@
   "name": "teste-pratico-digigrow",
   "private": true,
   "scripts": {
-    "build": "turbo build",
+    "build": "turbo build-frontend",
+    "build-domains": "turbo build-domains",
+    "build-infra": "turbo build-infra",
+    "run-infra": "turbo run-infra",
     "dev": "turbo dev",
+    "start": "turbo start",
     "lint": "turbo lint",
     "types": "turbo types",
     "test": "turbo test",

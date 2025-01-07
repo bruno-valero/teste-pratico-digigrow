@@ -11,6 +11,8 @@
     "lint": "eslint . --fix",
     "prebuild": "run-s types lint",
     "build": "tsup src/index.ts --format esm,cjs --dts --out-dir build",
+    "prebuild-domains": "run-s types lint",
+    "build-domains": "tsup src/index.ts --format esm,cjs --dts --out-dir build",
     "test": "vitest watch"
   },
   "devDependencies": {

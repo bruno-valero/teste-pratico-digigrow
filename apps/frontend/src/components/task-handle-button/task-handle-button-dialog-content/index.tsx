@@ -14,6 +14,17 @@ import { TaskHandleButtonDialogTitleInput } from './task-handle-button-dialog-ti
 interface TaskHandleButtonDialogContentProps
   extends ComponentProps<typeof DialogContent> {}
 
+/**
+ * ---
+ *
+ * ## TaskHandleButtonDialogContent
+ *
+ * Componente de conteúdo do diálogo de edição ou criação de tarefa. Exibe um formulário para solicitar a confirmação da ação.
+ *
+ * ---
+ *
+ * @param ...DialogContentProps - Propriedades adicionais para o componente DialogContent.
+ */
 export function TaskHandleButtonDialogContent(
   props: TaskHandleButtonDialogContentProps,
 ) {

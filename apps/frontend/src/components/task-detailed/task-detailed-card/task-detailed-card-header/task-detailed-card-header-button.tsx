@@ -8,6 +8,17 @@ import { Button } from '@/components/ui/button'
 interface TaskDetailedCardHeaderButtonProps
   extends ComponentProps<typeof Button> {}
 
+/**
+ * ---
+ *
+ * ## TaskDetailedCardHeaderButton
+ *
+ * Componente de botão do cabeçalho da tarefa detalhada. Exibe um botão que leva para a tela anterior.
+ *
+ * ---
+ *
+ * @param ...ButtonProps - Propriedades adicionais para o componente Button.
+ */
 export function TaskDetailedCardHeaderButton({
   children,
   ...props

@@ -10,6 +10,17 @@ import { useTaskHandleDialogContext } from '../contexts/task-handle-context'
 interface TaskHandleButtonDialogDescriptionTextAreaProps
   extends ComponentProps<typeof DescriptionTextArea> {}
 
+/**
+ * ---
+ *
+ * ## TaskHandleButtonDialogDescriptionTextArea
+ *
+ * Componente de texto de descrição do diálogo de edição ou criação de tarefa. Exibe um campo de texto de descrição para solicitar a confirmação da ação.
+ *
+ * ---
+ *
+ * @param ...DescriptionTextAreaProps - Propriedades adicionais para o componente DescriptionTextArea.
+ */
 export function TaskHandleButtonDialogDescriptionTextArea(
   props: TaskHandleButtonDialogDescriptionTextAreaProps,
 ) {

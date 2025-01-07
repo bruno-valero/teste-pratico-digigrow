@@ -6,6 +6,17 @@ import { Button } from '@/components/ui/button'
 interface TaskDetailedCardFooterEditButtonJSXProps
   extends ComponentProps<typeof Button> {}
 
+/**
+ * ---
+ *
+ * ## TaskDetailedCardFooterEditButtonJSX
+ *
+ * Componente de botão de edição da tarefa detalhada. Exibe um botão que, ao ser clicado, exibe um diálogo para solicitar a confirmação da edição da tarefa.
+ *
+ * ---
+ *
+ * @param ...ButtonProps - Propriedades adicionais para o componente Button.
+ */
 export function TaskDetailedCardFooterEditButtonJSX(
   props: TaskDetailedCardFooterEditButtonJSXProps,
 ) {

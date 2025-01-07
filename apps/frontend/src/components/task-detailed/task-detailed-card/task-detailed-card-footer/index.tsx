@@ -9,6 +9,17 @@ import { TaskDetailedCardFooterEditButton } from './task-detailed-card-footer-ed
 interface TaskDetailedCardFooterProps
   extends ComponentProps<typeof CardFooter> {}
 
+/**
+ * ---
+ *
+ * ## TaskDetailedCardFooter
+ *
+ * Componente de rodapé do componente TaskDetailedCard. Exibe botões de edição e exclusão da tarefa detalhada.
+ *
+ * ---
+ *
+ * @param ...CardFooterProps - Propriedades adicionais para o componente CardFooter.
+ */
 export function TaskDetailedCardFooter(props: TaskDetailedCardFooterProps) {
   return (
     <CardFooter

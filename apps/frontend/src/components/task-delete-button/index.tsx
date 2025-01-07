@@ -21,6 +21,19 @@ interface TaskDeleteButtonProps {
   buttonJSX: JSX.Element
 }
 
+/**
+ * ---
+ *
+ * ## TaskDeleteButton
+ *
+ * Componente de botão de exclusão de tarefa. Ao Clicar no botão, um diálogo é exibido para solicitar a confirmação da exclusão da tarefa.
+ *
+ * ---
+ *
+ * @param props.task - Tarefa a ser excluída.
+ * @param props.buttonJSX - Elemento JSX para renderização do botão.
+ * @returns
+ */
 export function TaskDeleteButton({ task, buttonJSX }: TaskDeleteButtonProps) {
   const { actions, refs } = useTaskDeleteButton({ task })
 

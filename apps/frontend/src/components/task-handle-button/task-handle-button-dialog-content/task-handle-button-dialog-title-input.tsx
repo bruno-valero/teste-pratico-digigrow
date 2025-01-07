@@ -10,6 +10,17 @@ import { useTaskHandleDialogContext } from '../contexts/task-handle-context'
 interface TaskHandleButtonDialogTitleInputProps
   extends ComponentProps<typeof TitleInput> {}
 
+/**
+ * ---
+ *
+ * ## TaskHandleButtonDialogTitleInput
+ *
+ * Componente de título do diálogo de edição ou criação de tarefa. Exibe um campo de título para solicitar a confirmação da ação.
+ *
+ * ---
+ *
+ * @param ...TitleInputProps - Propriedades adicionais para o componente TitleInput.
+ */
 export function TaskHandleButtonDialogTitleInput(
   props: TaskHandleButtonDialogTitleInputProps,
 ) {

@@ -1,36 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app).
+# Teste Prático da Digigrow - Sessão de Front-End
 
-## Getting Started
+Este é um teste prático proposto pela **Digigrow**. O teste prático consiste na criação de uma aplicação com duas partes: **back-end** e **front-end**. Este diretório e suas subpastas contém a parte do **front-end** da aplicação.
 
-First, run the development server:
+## Sobre o Front-End
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+No **front-end**, deve ser criada uma interface em **Next.js** (um framework baseado em **React.js**) que permita ao usuário interagir com a API. A interface deve permitir **listar**, **adicionar**, **editar** e **excluir** tarefas de forma intuitiva. Embora não seja um requisito, um **design responsivo** será considerado um diferencial.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O **front-end** deve consumir a API de tarefas fornecida pelo **back-end**. Para saber mais sobre a API, consulte outro módulo deste monorepo chamado de **[infra](https://github.com/bruno-valero/teste-pratico-digigrow/tree/main/apps/infra)**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Documentação e Tipagem
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Tanto o back-end, quanto o front-end, serão desenvolvidos em **Typescipt** que é um superset de JavaScript concedendo tipagem estática para o código. Através dele cada componente importante da aplicação estará devidamente documentada com algumas explicações sobre ele.
