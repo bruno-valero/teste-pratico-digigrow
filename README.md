@@ -16,11 +16,27 @@ Este é um teste prático proposto pela **Digigrow**. O teste prático consiste 
 
 ## Sobre o Monorepo
 
-Como o desafio proposto é a criação de um projeto com duas partes, **back-end** e **front-end**, decidi utilizar o **Monorepo** para organizar os projetos. O **Monorepo** consiste em organizar vários projetos dentro de uma única estrutura de diretórios. Isso permite que os projetos sejam mantidos e gerenciados de forma mais eficiente, além de facilitar a comunicação e a integração entre os projetos. Para faciçitar a configuração, eu estou utilizando uma solução da [**Versel**](https://vercel.com) chamada **[Turborepo](https://turbo.build)**.
+Como o desafio proposto é a criação de um projeto com duas partes, **back-end** e **front-end**, decidi utilizar o **Monorepo** para organizar os projetos. O **Monorepo** consiste em organizar vários projetos dentro de uma única estrutura de diretórios. Isso permite que os projetos sejam mantidos e gerenciados de forma mais eficiente, além de facilitar a comunicação e a integração entre os projetos. Para facilitar a configuração, eu estou utilizando uma solução da [**Versel**](https://vercel.com) chamada **[Turborepo](https://turbo.build)**.
 
 Para entender melhor o **Monorepo**, recomendo a leitura do artigo "[Monorepo: como usá-lo para desenvolver e integrar grandes projetos](https://www.alura.com.br/artigos/monorepo-usa-lo-desenvolver-integrar-grandes-projetos)". 
 
 ## Começando
+
+### Clonando o repositório
+
+Abra o terminal e execute o seguinte comando:
+
+```bash
+git clone https://github.com/bruno-valero/teste-pratico-digigrow
+```
+
+Então acesse o repositório, usando o comando `cd`:
+
+```bash
+cd teste-pratico-digigrow
+```
+
+---
 
 ### Instalação
 
@@ -56,7 +72,7 @@ Para realizar os passos a seguir, é necessário ter as seguintes variáveis de 
 
 ### Rodando os testes
 
-Há dois tipos de testes: os **unitários** e os **end-to-end**. O **unitários** são os testes que são executados na camada de domínios da aplicação, enquanto os **end-to-end** são os testes que são executados na camada de infraestrutura da aplicação.
+Há dois tipos de testes: os **unitários** e os **end-to-end**. Os **unitários** são os testes que são executados na camada de domínios da aplicação, enquanto os **end-to-end** são executados na camada de infraestrutura da aplicação.
 
 #### **Rodando os testes unitários**
 
