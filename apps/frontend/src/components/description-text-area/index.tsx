@@ -73,7 +73,7 @@ export function DescriptionTextArea(props: DescriptionTextAreaProps) {
         className={cn(remainingCharacters <= 0 && 'blur-[1px]')}
         // disabled={remainingCharacters <= 0}
       />
-      <span>{remainingCharacters} caracteres restantes</span>
+      <span>{remainingCharacters - 1} caracteres restantes</span>
     </div>
   )
 }
